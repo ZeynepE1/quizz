@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="input-box">
+            <label >Lütfen bir sayı giriniz:</label><br><br>
+            <input type="number" id="sayi"  placeholder="Enter your number..."><br><br>
+        </div>
+
+
+        <div class="output-box">
+            <label >Sonuç:</label><br>
+            <div>
+                <output type="number" id="sum"  >
+                <textarea disabled id="tex"  cols="20" rows="5" placeholder="sonuç..."></textarea>
+            </div>
+            
+        </div>
+        <br><br>
+
+
+        <div>
+            <button id="myBtn" onclick="toplam()" >Hesapla</button>
+            
+        </div>
+    </div>
+
+
+
+
+    
+
+
+    <script>
+         function toplam(){
+            var input_deger= document.getElementById('sayi').value;
+            var sonuc = 0;
+            for(let i = 0; i<=input_deger; i++){
+                sonuc += i;
+            }
+            document.getElementById("tex").innerHTML=sonuc
+
+        }
+
+    </script>
+    
+
+    
+
+
+</body>
+</html>
